@@ -8,65 +8,6 @@ namespace Scanner
 {
     public class Tools
     {
-
-        //public Queue<string> TokenizeText(string text, Dictionary<int, string> existingTokens)
-        //{
-        //    List<string> characters = existingTokens.Values.ToList();
-        //    Queue<string> tokens = new Queue<string>();
-        //    string[] elements = text.Split(new[] { "\r\n", "\r", "\n", "\t", " " }, StringSplitOptions.None);
-        //    foreach (string element in elements)
-        //    {
-        //        if (!string.IsNullOrWhiteSpace(element) && !string.IsNullOrEmpty(element))
-        //        {
-        //            List<string> find = characters.FindAll(x => element.Contains(x));
-        //            if (find.Count() == 0)
-        //            {
-        //                tokens.Enqueue(element);
-        //            }                    
-        //            else
-        //            {
-        //                var greatestElement = find.OrderByDescending(x => x.Length).FirstOrDefault();                        
-        //                int index = element.IndexOf(greatestElement);
-        //                string newElement = string.Empty;
-        //                if (index == 0)
-        //                {
-        //                    tokens.Enqueue(element.Substring(0, greatestElement.Length));
-        //                    newElement = element.Remove(0, greatestElement.Length);
-        //                }
-        //                else
-        //                {
-        //                    tokens.Enqueue(element.Substring(0, index));
-        //                    newElement = element.Remove(0, index);
-        //                }
-        //                while (newElement.Length > 0)
-        //                {                            
-        //                    find = characters.FindAll(x => newElement.Contains(x));
-        //                    if (find.Count() == 0)
-        //                    {
-        //                        tokens.Enqueue(newElement);
-        //                        newElement = string.Empty;
-        //                    }
-        //                    else
-        //                    {
-        //                        index = newElement.IndexOf(greatestElement);
-        //                        if (index == 0)
-        //                        {
-        //                            tokens.Enqueue(newElement.Substring(0, greatestElement.Length));
-        //                            newElement = newElement.Remove(0, greatestElement.Length);
-        //                        }
-        //                        else
-        //                        {
-        //                            tokens.Enqueue(newElement.Substring(0, index));
-        //                            newElement = newElement.Remove(0, index);
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-        //    return tokens;
-        //}
-
         public Queue<string> TokenizeText(string text, Dictionary<int, string> existingTokens)
         {
             List<string> characters = existingTokens.Values.ToList();
@@ -172,7 +113,6 @@ namespace Scanner
                 }
             }
             return finalTokenList;
-        }
-        
+        }        
     }
 }
